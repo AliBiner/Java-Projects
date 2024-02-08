@@ -12,6 +12,7 @@ import java.util.Date;
 @Document(indexName = "user")
 @ToString
 @NoArgsConstructor
+
 public class UserLombok {
     private String id;
     private String name;

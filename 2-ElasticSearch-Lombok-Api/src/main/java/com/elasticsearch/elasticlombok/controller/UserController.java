@@ -44,7 +44,7 @@ public class UserController {
         return CompletableFuture.completedFuture(ResponseEntity.ok(users));
     }
 
-    @PostMapping("/get")
+    @GetMapping("/get")
     @Async
     public CompletableFuture<ResponseEntity<List<User>>> GetAllAsync(@RequestBody User user){
         List<User> users = userRepository.findByNameContainsOrSurnameContains(user.getName(),user.getSurname());
